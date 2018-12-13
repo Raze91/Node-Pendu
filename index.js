@@ -46,6 +46,7 @@ let MotATrouver= Mots[3];
 const data = MotATrouver.split('');
 let MotMystere = '';
 const letters = [];
+let essais = 5;
 
 const App = {
     title : figlet.textSync('Node-Pendu','Ghost'),
@@ -147,6 +148,7 @@ function AskQuestion(){
                 MotMystere += '-';
                 }
             }
+
         }
         console.log('\n'+MotMystere);
         if(MotMystere === MotATrouver){
@@ -154,6 +156,9 @@ function AskQuestion(){
         } else {
             AskQuestion();
         }
+        // if(essais < 1){
+        // console.log(figlet.textSync('Game Over !','Ogre'));
+        // }
     });
 }
 
